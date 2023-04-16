@@ -1,0 +1,44 @@
+* {
+  font-family: unset;
+}
+
+body {
+  padding-left: 5%;
+}
+
+#introduce {
+  position: relative;
+}
+
+#introduce ul {
+  display: inline;
+  position: absolute;
+}
+#introduce li {
+  margin-bottom: 10px;
+}
+
+#youtube-media {
+  width: 80%;
+  aspect-ratio: 16/9;
+  margin-bottom: 10px;
+}
+
+#skill h2 {
+  margin-bottom: 0px;
+}
+
+.skill-tag {
+  display: block;
+}
+.skill-icon {
+  position: relative;
+  display: inline-block;
+  width: 120px;
+  height: 35px;
+}
+
+.skill-icon > img {
+  position: absolute;
+  top: 50%;
+}
