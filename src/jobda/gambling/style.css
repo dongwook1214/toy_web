@@ -1,0 +1,33 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+* {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.gambling-button {
+  cursor: url("../../../asset/drooling.png"), auto;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+@keyframes ani {
+  0% {
+    left: 0px;
+    top: 0px;
+  }
+  25% {
+    left: 0px;
+    top: 100px;
+  }
+  50% {
+    left: 0px;
+    top: 50px;
+  }
+  75% {
+    left: 0px;
+    top: 200px;
+  }
+  100% {
+    left: 0px;
+    top: 0px;
+  }
+}

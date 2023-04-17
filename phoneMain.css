@@ -1,5 +1,7 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
 * {
-  font-family: unset;
+  font-family: "Noto Sans KR", sans-serif;
 }
 
 body {
@@ -42,4 +44,10 @@ body {
 .skill-icon > img {
   position: absolute;
   top: 50%;
+}
+
+#github-iframe {
+  width: 80%;
+  aspect-ratio: 16/9;
+  margin-bottom: 10px;
 }

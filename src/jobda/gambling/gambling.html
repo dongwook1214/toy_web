@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gambling</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="gambling.js"></script>
+  </head>
+  <body>
+    <h1>도박장에 온걸 환영합니다!</h1>
+    <h3>나의 현금은? <span id="having-money">1000</span>원</h3>
+    <form action="" method="">
+      <fieldset>
+        <legend>도박 명세서</legend>
+        <label for="id">아이디: </label>
+        <input type="text" name="id" id="id" value="입력 안 해도됨!" />
+        <br /><br />
+        <label for="password">비밀번호: </label>
+        <input
+          type="text"
+          name="password"
+          id="password"
+          value="입력 안 해도됨!"
+        /><br /><br />
+        <label for="money">판돈: </label>
+        <input type="number" name="money" id="money" /> <br /><br />
+        도박에 동의 하십니까?<br /><br />
+        <input type="radio" name="accept" value="yes" id="yes" />
+        <label for="yes">예</label>
+        <br /><br />
+        <input type="radio" name="accept" value="no" id="no" checked />
+        <label for="no">아니요</label><br /><br />
+      </fieldset>
+      <br />
+      <input
+        type="button"
+        value="도박!"
+        class="gambling-button"
+        onclick="gamblingFunction()"
+      />
+      <input type="reset" />
+    </form>
+  </body>
+</html>
