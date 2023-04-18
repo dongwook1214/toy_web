@@ -1,0 +1,22 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+* {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+body {
+  margin-left: 20%;
+  margin-right: 20%;
+
+  border-left: solid #e2e2e2 2px;
+  border-right: solid #e2e2e2 2px;
+
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+#youtube {
+  width: 80%;
+  aspect-ratio: 16/9;
+  margin-bottom: 10px;
+}
