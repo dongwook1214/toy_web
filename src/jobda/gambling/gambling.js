@@ -1,12 +1,7 @@
-function gamblingFunction() {
+function isValid() {
   let money = document.getElementById("having-money").innerHTML;
   const stake = document.getElementById("money").value;
   const accept = document.querySelector('input[name="accept"]:checked').value;
-  console.log(accept);
-  if (accept == "no") {
-    alert("... 동의하지 않는거냐");
-    return;
-  }
   if (
     stake == null ||
     stake == "" ||
@@ -14,8 +9,17 @@ function gamblingFunction() {
     Number(stake) < 0
   ) {
     alert("어허! 판돈을 확인해라!");
-    return;
+    return false;
+  } else if (accept == "no") {
+    alert("... 동의하지 않는거냐");
+    return false;
   }
+  return true;
+}
+
+function letsGambling() {
+  let money = document.getElementById("having-money").innerHTML;
+  const stake = document.getElementById("money").value;
   const randNum = Math.floor(Math.random() * 10);
   if (randNum % 2) {
     alert("이겼다!");
@@ -25,4 +29,9 @@ function gamblingFunction() {
     money = Number(money) - Number(stake);
   }
   document.getElementById("having-money").innerHTML = money;
+}
+
+function gamblingFunction() {
+  if (!isValid()) return;
+  letsGambling();
 }
