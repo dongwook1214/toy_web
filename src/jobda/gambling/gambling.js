@@ -7,7 +7,12 @@ function gamblingFunction() {
     alert("... 동의하지 않는거냐");
     return;
   }
-  if (stake == null || stake == "" || Number(stake) > Number(money)) {
+  if (
+    stake == null ||
+    stake == "" ||
+    Number(stake) > Number(money) ||
+    Number(stake) < 0
+  ) {
     alert("어허! 판돈을 확인해라!");
     return;
   }
