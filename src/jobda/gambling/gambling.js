@@ -22,7 +22,7 @@ function letsGambling() {
   const stake = document.getElementById("money").value;
   const randNum = Math.floor(Math.random() * 10);
   if (randNum % 2) {
-    alert("이겼다!");
+    alert("이겼다ㅎㅎ");
     money = Number(money) + Number(stake);
   } else {
     alert("졌다ㅜㅜ");
@@ -31,7 +31,19 @@ function letsGambling() {
   document.getElementById("having-money").innerHTML = money;
 }
 
+function gamblingSmartContract() {
+  const stake = document.getElementById("money").value;
+  const Http = new XMLHttpRequest();
+  const url = `https://api-testnet.polygonscan.com/api?module=account&action=balance&address=0xa17CCeC4f1a1a8775C83913Cc1F837ADb6F12cC2&apikey=YourApiKeyToken`;
+  Http.open("GET", url);
+  Http.send();
+  Http.onreadystatechange = (e) => {
+    console.log(Http.responseText);
+  };
+}
+
 function gamblingFunction() {
   if (!isValid()) return;
   letsGambling();
+  // httpEx();
 }
