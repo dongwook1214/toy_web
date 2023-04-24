@@ -1,11 +1,11 @@
 function isValid() {
-  let money = document.getElementById("having-money").innerHTML;
+  let balance = document.getElementById("having-money").innerHTML;
   const stake = document.getElementById("money").value;
   const accept = document.querySelector('input[name="accept"]:checked').value;
   if (
     stake == null ||
     stake == "" ||
-    Number(stake) > Number(money) ||
+    Number(stake) > Number(balance) ||
     Number(stake) < 0
   ) {
     alert("어허! 판돈을 확인해라!");
@@ -18,17 +18,22 @@ function isValid() {
 }
 
 function letsGambling() {
-  let money = document.getElementById("having-money").innerHTML;
+  let balance = document.getElementById("having-money").innerHTML;
   const stake = document.getElementById("money").value;
   const randNum = Math.floor(Math.random() * 10);
   if (randNum % 2) {
     alert("이겼다ㅎㅎ");
-    money = Number(money) + Number(stake);
+    balance = Number(balance) + Number(stake);
   } else {
     alert("졌다ㅜㅜ");
-    money = Number(money) - Number(stake);
+    balance = Number(balance) - Number(stake);
   }
-  document.getElementById("having-money").innerHTML = money;
+  document.getElementById("having-money").innerHTML = balance;
+}
+
+async function loadBalance() {
+  const id = document.getElementById("money").value;
+  const balence = await contract.methods.playerMoney(account).call();
 }
 
 function gamblingSmartContract() {
@@ -43,7 +48,8 @@ function gamblingSmartContract() {
 }
 
 function gamblingFunction() {
-  if (!isValid()) return;
-  letsGambling();
+  // if (!isValid()) return;
+  // letsGambling();
+  loadBalance();
   // httpEx();
 }
