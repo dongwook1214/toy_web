@@ -3,3 +3,9 @@ async function checkBalance(checkId) {
   console.log(response);
   return response;
 }
+
+async function updateBalance(checkId) {
+  document.getElementById("having-money").innerHTML = await checkBalance(
+    checkId
+  );
+}

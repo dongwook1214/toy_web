@@ -1,4 +1,6 @@
-const rpcUrl = "https://polygon-mumbai.infura.io/v3/";
+//토큰 내거에서만 작동한다...
+const rpcUrl =
+  "https://polygon-mumbai.infura.io/v3/91e8ec4ae1754be68dabb22fb78acde2";
 const web3 = new Web3(rpcUrl);
 const account = "0xa17CCeC4f1a1a8775C83913Cc1F837ADb6F12cC2";
 //여기에 돈 안 들어있다...

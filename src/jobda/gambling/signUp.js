@@ -1,4 +1,5 @@
 async function signUp(signUpId) {
+  console.log(signUpId);
   const signUpTx = await contract.methods.signIn(signUpId);
   const balance = parseInt(await checkBalance(signUpId));
   if (balance > 0) {
