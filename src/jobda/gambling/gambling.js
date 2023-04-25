@@ -41,7 +41,15 @@ async function gamblingFunction() {
     await gamblingSmartContract(id, stake);
   } catch (e) {
     alert("헉...! 잡히지 않은 에러가...! 다시 시도해 주세요!");
+    isContinue = false;
+    return;
   }
-  updateBalance(id);
+  let after_balance = await checkBalance(id);
+  if (parseInt(balance) < parseInt(after_balance)) {
+    alert("야호! 이겼다!");
+  } else {
+    alert("힝... 졌다...");
+  }
+  updateBalanceWithBalance(after_balance);
   isContinue = false;
 }

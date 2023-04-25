@@ -9,3 +9,6 @@ async function updateBalance(checkId) {
     checkId
   );
 }
+function updateBalanceWithBalance(balance) {
+  document.getElementById("having-money").innerHTML = balance;
+}
